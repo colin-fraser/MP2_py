@@ -4,7 +4,7 @@ import string
 
 stopWordsPath = sys.argv[1]
 delimitersPath = sys.argv[2]
-test = True
+test = False
 
 # TODO
 with open(stopWordsPath) as f:
