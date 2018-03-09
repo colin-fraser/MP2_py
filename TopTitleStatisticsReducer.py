@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import sys
 
-test = True
+test = False
 
 total_sum = 0
 maximum = 0
