@@ -4,6 +4,7 @@ import sys
 
 # input comes from STDIN
 for line in sys.stdin:
+    pass
     # TODO
 
 

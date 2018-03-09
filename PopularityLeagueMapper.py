@@ -7,6 +7,7 @@ leaguePath = sys.argv[1]
 
 
 with open(leaguePath) as f:
+    pass
 	#TODO
 
 
@@ -14,5 +15,5 @@ with open(leaguePath) as f:
 
 
 for line in sys.stdin:
-
+    pass
        #TODO

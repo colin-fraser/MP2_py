@@ -6,6 +6,6 @@ import sys
 #TODO
 
 for line in sys.stdin:
-    # TODO
+    pass
 
 #TODO
