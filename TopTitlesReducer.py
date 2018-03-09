@@ -8,7 +8,7 @@ input_data = sys.stdin if not test else ["A 100", "C 98", "B 99", "E 96", "D 97"
 
 lines = []
 for line in input_data:
-    word, count = line.split(' ')
+    word, count = line.split('\t')
     count = int(count)
     lines.append((count, word))
 

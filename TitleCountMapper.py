@@ -26,4 +26,4 @@ for line in input_data:
 
     for word in chunks:
         if word not in stop_words:
-            sys.stdout.write("%s 1\n" % word)
+            sys.stdout.write("%s\t1\n" % word)
