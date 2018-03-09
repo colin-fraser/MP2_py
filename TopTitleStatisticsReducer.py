@@ -21,15 +21,11 @@ for line in input_data:
     if count < minimum:
         minimum = count
     n += 1
+    counts.append(count)
 
 mean = total_sum / n
 
-for line in input_data:
-    word, count = line.split('\t')
-    count = int(count)
-
-    sq_err += (count - mean)**2
-
+sq_err = sum([(c - mean)**2 for c in counts])
 var = sq_err / n
 
 sys.stdout.write('Mean\t%i\n' % mean)
