@@ -12,8 +12,9 @@ for line in input_data:
     count = int(count)
     lines.append((count, word))
 
-lines = sorted(lines)
+lines = sorted(lines)[-top_n:][::-1]
+alpha_lines = sorted([(line[1], line[0]) for line in lines])
 
-for line in lines[-top_n:][::-1]:
-    sys.stdout.write("%s\t%i\n" % (line[1], line[0]))
+for line in alpha_lines:
+    sys.stdout.write("%s\t%i\n" % (line[0], line[1]))
 
