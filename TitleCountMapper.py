@@ -1,28 +1,29 @@
 #!/usr/bin/env python
-
 import sys
 import string
 
-
-
 stopWordsPath = sys.argv[1]
 delimitersPath = sys.argv[2]
-
+test = True
 
 # TODO
 with open(stopWordsPath) as f:
-    # TODO
+    stop_words = [s.strip() for s in f.readlines()]
 
-
-
-
-
-
-#TODO 
 with open(delimitersPath) as f:
-    # TODO
+    delimiters = f.read()
 
-for line in sys.stdin:
+input_data = sys.stdin if not test else ["Hello", "Hello, World (what is this)"]
+
+for line in input_data:
   
-    # TODO
+    chunks = [line]
+    for delimiter in delimiters:
+        new_chunks = []
+        for chunk in chunks:
+            new_chunks += [c.lower().strip() for c in chunk.split(delimiter) if c]
+        chunks = new_chunks
 
+    for word in chunks:
+        if word not in stop_words:
+            sys.stdout.write("%s 1\n" % word)
