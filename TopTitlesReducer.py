@@ -15,5 +15,5 @@ for line in input_data:
 lines = sorted(lines)
 
 for line in lines[-top_n:][::-1]:
-    sys.stdout.write("%s %i\n" % (line[1], line[0]))
+    sys.stdout.write("%s\t%i\n" % (line[1], line[0]))
 

@@ -18,5 +18,5 @@ for line in input_data:
         out[word] = count
 
 for word, count in out.items():
-    sys.stdout.write("%s %i\n" % (word, count))
+    sys.stdout.write("%s\t%i\n" % (word, count))
 
